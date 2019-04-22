@@ -48,10 +48,11 @@ fieldset:disabled a.btn {
 .btn-indigo {
   @include button-variant($indigo, $indigo, $hover-background: darken($indigo, 7.5%), $hover-border: darken($indigo, 10%), $active-background: darken($indigo, 10%), $active-border: darken($indigo, 12.5%));
   border: none;
-  border-radius: 30px;
+  border-radius: 27px;
   color: $white;
   font-size: 22px;
   font-weight: 900;
-  padding: 0.48em 1.75em 0.52em;
+  height: 54px;
+  padding: 0.475em 1.75em;
   width: 220px;
 }

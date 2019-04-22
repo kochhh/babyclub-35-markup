@@ -1,28 +1,7 @@
 @font-face {
   font-family: DINRoundPro;
-  src: url("../fonts/dinroundpro-light.woff2") format("woff2"), url("../fonts/dinroundpro-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: DINRoundPro;
-  src: url("../fonts/dinroundpro-reg.woff2") format("woff2"), url("../fonts/dinroundpro-reg.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: DINRoundPro;
   src: url("../fonts/dinroundpro-med.woff2") format("woff2"), url("../fonts/dinroundpro-med.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: DINRoundPro;
-  src: url("../fonts/dinroundpro-bold.woff2") format("woff2"), url("../fonts/dinroundpro-bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -63,7 +42,7 @@ body {
   margin: 0;
   font-family: DINRoundPro, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.24;
   color: #fff;
   text-align: left;
@@ -1061,11 +1040,12 @@ fieldset:disabled a.btn {
   background-color: #0058a6;
   border-color: #0058a6;
   border: none;
-  border-radius: 30px;
+  border-radius: 27px;
   color: #fff;
   font-size: 22px;
   font-weight: 900;
-  padding: 0.48em 1.75em 0.52em;
+  height: 54px;
+  padding: 0.475em 1.75em;
   width: 220px;
 }
 
@@ -1142,7 +1122,6 @@ fieldset:disabled a.btn {
 
 .order-note__label {
   font-size: 15px;
-  font-weight: 500;
   line-height: 1.05;
   margin: 0 auto 10px;
   width: 170px;
@@ -1236,7 +1215,6 @@ fieldset:disabled a.btn {
 
 .steps-item {
   font-size: 15px;
-  font-weight: 500;
   position: relative;
   text-align: left;
   z-index: 0;

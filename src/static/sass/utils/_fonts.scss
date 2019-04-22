@@ -11,8 +11,5 @@ $font-root-path: "../fonts/";
   }
 }
 
-@include fontFace(DINRoundPro, "dinroundpro-light", 300);
-@include fontFace(DINRoundPro, "dinroundpro-reg", 400);
 @include fontFace(DINRoundPro, "dinroundpro-med", 500);
-@include fontFace(DINRoundPro, "dinroundpro-bold", 700);
 @include fontFace(DINRoundPro, "dinroundpro-black", 900);
