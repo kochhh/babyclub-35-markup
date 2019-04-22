@@ -45,6 +45,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 85px;
+    transition: none;
     width: 229px;
 
     @include retina {
@@ -81,13 +82,9 @@
   }
 
   &__discount {
-    background-image: url(../i/discount.png);
-    background-size: contain;
     display: block;
-    height: 75px;
     margin-left: auto;
     margin-right: auto;
-    text-indent: -1000em;
     transform: translateX(-4%);
     width: 153px;
 
@@ -95,18 +92,16 @@
       transform: translateX(-2%);
     }
 
-    @include retina {
-      background-image: url(../i/discount@2x.png);
-    }
-
     @include media-breakpoint-up(md) {
-      height: 120px;
       width: 244px;
     }
 
     @include media-breakpoint-up(lg) {
-      height: 150px;
       width: 306px;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 
