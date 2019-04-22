@@ -18,11 +18,11 @@ block content
   .slider-container
     .slider.swiper-container
       .swiper-wrapper
-        - var i = 0
-        while i < 14
-          - i++
+        - var names = ["Первый год вместе", "Тайм-менеджмент для мам", "Думай как ребёнок, поступай как взрослый", "100 способов уложить ребёнка спать", "Как говорить, чтобы дети слушали, и как слушать, чтобы дети говорили", "Методика раннего развития Марии Монтессори", "Развивай-ка", "А вот и я!", "А вот и я!", "Мой первый альбом с грузовичком Лёвой", "Мой первый альбом с грузовичком Лёвой", "Доктор_аннамама, у меня вопрос: Как сохранить здоровье ребёнка", "Как научить ребёнка спать", "В ожидании малыша"]
+        each name, i in names
           .swiper-slide
-            img(src="static/i/books/book-"+i+".jpg" srcset="static/i/books/book-"+i+".jpg 1x, static/i/books/book-"+i+"@2x.jpg 2x" alt="")
+            img.swiper-lazy(data-src="static/i/books/book-"+(i+1)+".jpg" data-srcset="static/i/books/book-"+(i+1)+".jpg 1x, static/i/books/book-"+(i+1)+"@2x.jpg 2x" alt=name)
+            .swiper-lazy-preloader.swiper-lazy-preloader-white
       button.swiper-button-prev(type="button")
       button.swiper-button-next(type="button")
   .steps-title Для этого необходимо:

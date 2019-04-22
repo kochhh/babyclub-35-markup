@@ -4,6 +4,8 @@ export default function slider() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
+    preloadImages: false,
+    lazy: true,
     slidesPerView: 4,
     breakpoints: {
       1099: {

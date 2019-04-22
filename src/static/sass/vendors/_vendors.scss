@@ -1,2 +1,4 @@
 // Swiper
-@import '../../../../node_modules/swiper/src/components/core/core'
+@import '../../../../node_modules/swiper/src/scss/functions';
+@import '../../../../node_modules/swiper/src/components/core/core';
+@import '../../../../node_modules/swiper/src/components/lazy/lazy';

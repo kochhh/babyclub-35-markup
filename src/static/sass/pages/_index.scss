@@ -122,11 +122,17 @@
   overflow: visible;
 
   .swiper-slide {
-    img {
-      max-height: 160px;
+    height: 160px;
 
-      @include media-breakpoint-up(md) {
-        max-height: 186px;
+    @include media-breakpoint-up(md) {
+      height: 186px;
+    }
+
+    img {
+      max-height: 100%;
+
+      &:not(.swiper-lazy-loaded) {
+        display: none;
       }
     }
   }
