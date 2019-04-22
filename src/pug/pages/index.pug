@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block content
+  .closing-title
+    div «Клуб заботливых мам» закрывается
+    div Успей заказать приз до 31 мая 2019 г.
+  .prizes
+    picture
+      source(type="image/webp" srcset="static/i/prizes-sm.webp 1x, static/i/prizes-sm@2x.webp 2x" media="(max-width: 767.98px)")
+      source(type="image/jpeg" srcset="static/i/prizes-sm.png 1x, static/i/prizes-sm@2x.png 2x" media="(max-width: 767.98px)")
+      source(type="image/webp" srcset="static/i/prizes.webp 1x, static/i/prizes@2x.webp 2x" media="(min-width: 768px)")
+      source(type="image/jpeg" srcset="static/i/prizes.png 1x, static/i/prizes@2x.png 2x" media="(min-width: 768px)")
+      img(src="static/i/prizes.png" alt="Призы")
+  .order-note
+    .order-note__label А также, при заказе развивающих игрушек
+    .order-note__name #[strong «Джунгли на прогулке»] и #[strong «Roller» музыкальный]
+  h2.slider-title Любая книга в подарок
+  .slider-container
+    .slider.swiper-container
+      .swiper-wrapper
+        - var i = 0
+        while i < 14
+          - i++
+          .swiper-slide
+            img(src="static/i/books/book-"+i+".jpg" srcset="static/i/books/book-"+i+".jpg 1x, static/i/books/book-"+i+"@2x.jpg 2x" alt="")
+      button.swiper-button-prev(type="button")
+      button.swiper-button-next(type="button")
+  .steps-title Для этого необходимо:
+  ol.steps
+    li.steps-item
+      p Быть зарегистрированным/зарегистрироваться на&nbsp;сайте #[a(href="https://babyclub.lenta.com/" target="_blank") www.babyclub.lenta.com]
+    li.steps-item
+      p Совершать покупки товаров-участников Pampers, Тема, Nutrilon/Малютка по&nbsp;карте ЛЕНТА для&nbsp;накопления пуговок
+    li.steps-item
+      p Заказывать любые призы за&nbsp;пуговки на&nbsp;сайте со&nbsp;скидкой 35%
+    li.steps-item
+      p При&nbsp;оформлении игрушек «Джунгли на&nbsp;прогулке» или «Roller» музыкальный заказать любую книгу в&nbsp;ПОДАРОК
+  .bottom
+    .hurryup #[span Торопись]#[br] акция действует:#[br] #[strong с 23 апреля по 31 мая 2019 г.]
+    .signup
+      button.btn.btn-indigo(type="button") Регистрация

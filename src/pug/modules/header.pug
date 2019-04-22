@@ -1,0 +1,23 @@
+header.header
+  .container
+    .logo
+      a.logo__link(href="#" title="Клуб заботливых мам")
+        span.sr-only Клуб заботливых мам
+    .intro
+      h1.intro-title
+        strong.intro-title__discount -35%
+        span.intro-title__text на все призы
+      .intro-decor.intro-decor--trees
+        picture
+          source(type="image/webp" srcset="static/i/trees-sm.webp 1x, static/i/trees-sm@2x.webp 2x" media="(max-width: 767.98px)")
+          source(type="image/png" srcset="static/i/trees-sm.png 1x, static/i/trees-sm@2x.png 2x" media="(max-width: 767.98px)")
+          source(type="image/webp" srcset="static/i/trees.webp 1x, static/i/trees@2x.webp 2x" media="(min-width: 768px)")
+          source(type="image/png" srcset="static/i/trees.png 1x, static/i/trees@2x.png 2x" media="(min-width: 768px)")
+          img(src="static/i/trees.png" alt="" role="presentation")
+      .intro-decor.intro-decor--drummer
+        picture
+          source(type="image/webp" srcset="static/i/drummer-sm.webp 1x, static/i/drummer-sm@2x.webp 2x" media="(max-width: 767.98px)")
+          source(type="image/png" srcset="static/i/drummer-sm.png 1x, static/i/drummer-sm@2x.png 2x" media="(max-width: 767.98px)")
+          source(type="image/webp" srcset="static/i/drummer.webp 1x, static/i/drummer@2x.webp 2x" media="(min-width: 768px)")
+          source(type="image/png" srcset="static/i/drummer.png 1x, static/i/drummer@2x.png 2x" media="(min-width: 768px)")
+          img(src="static/i/drummer.png" alt="Призы" role="presentation")

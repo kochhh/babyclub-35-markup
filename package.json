@@ -1,0 +1,63 @@
+{
+  "name": "gulp-starting-setup",
+  "version": "1.0.0",
+  "description": "Gulp starting setting-up for front end. Pug, SASS, ES6 modules bundling, SVG sprites, etc.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kochhh/babyclub-35-markup"
+  },
+  "keywords": [],
+  "author": "Konstantin Kochurov (himamma@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-terser": "^1.1.7",
+    "gulp-wait": "0.0.2",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^4.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "circletype": "^2.3.0",
+    "popper.js": "^1.15.0",
+    "swiper": "^4.5.0"
+  },
+  "browserslist": [
+    "> 0.25% in RU",
+    "not dead",
+    "not op_mini all"
+  ]
+}
