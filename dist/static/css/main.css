@@ -1278,8 +1278,7 @@ fieldset:disabled a.btn {
   margin-left: -20px;
   margin-right: -20px;
   overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px 5px;
 }
 
 .hurryup {
