@@ -88,7 +88,7 @@ export function stylesDev() {
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded',
-      precision: 5
+      precision: 4
     }))
     .pipe(sourcemaps.write())
     .pipe(postcss([

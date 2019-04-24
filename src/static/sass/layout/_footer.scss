@@ -28,6 +28,17 @@
   }
 }
 
+.logos {
+  > .row {
+    > .col-5 {
+      @include media-breakpoint-down(sm) {
+        flex-basis: 41.6%;
+        max-width: 41.6%;
+      }
+    }
+  }
+}
+
 .logos-item {
   align-items: center;
   display: flex;
