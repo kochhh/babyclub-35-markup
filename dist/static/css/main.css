@@ -822,6 +822,17 @@ template {
   }
 }
 
+/* a11y */
+
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
+}
+
 body {
   background-image: url(../i/bg-pattern.png);
   background-position: 50% 0;
@@ -1192,6 +1203,7 @@ fieldset:disabled a.btn {
 
 .steps-item {
   font-size: 15px;
+  overflow-wrap: break-word;
   position: relative;
   text-align: left;
   z-index: 0;
