@@ -199,7 +199,7 @@ const taskDev = series(
 
 const taskBuild = series(
   clean,
-  parallel(html, stylesBuild, jsLibs, jsBuild, imgCopy, fonts)
+  parallel(html, stylesBuild, jsLibs, jsBuild, imgCopy, fonts, emailCopy)
 )
 
 export { taskDev as default, taskBuild as build }
