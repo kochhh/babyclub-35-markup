@@ -33,6 +33,7 @@ const source = ((base) => ({
   js:     `${base}/static/js`,
   img:    `${base}/static/img`,
   fonts:  `${base}/static/fonts`,
+  email:  `${base}/email`
 }))('src')
 
 const build = ((base) => ({
@@ -41,6 +42,7 @@ const build = ((base) => ({
   js:     `${base}/static/js`,
   img:    `${base}/static/i`,
   fonts:  `${base}/static/fonts`,
+  email:  `${base}/email`
 }))('dist')
 
 const Server = server.create()
@@ -164,13 +166,7 @@ export function jsBuild() {
     .pipe(dest(`${build.js}/`))
 }
 
-export function imgDev() {
-  return src(`${source.img}/**/*.{png,jpg,jpeg,webp,svg}`)
-    .pipe(plumber({ errorHandler }))
-    .pipe(dest(`${build.img}/`))
-}
-
-export function imgBuild() {
+export function imgCopy() {
   return src(`${source.img}/**/*.{png,jpg,jpeg,webp,svg}`)
     .pipe(plumber({ errorHandler }))
     .pipe(dest(`${build.img}/`))
@@ -182,21 +178,28 @@ export function fonts() {
     .pipe(dest(`${build.fonts}/`))
 }
 
+export function emailCopy() {
+  return src(`${source.email}/**/*.*`)
+    .pipe(plumber({ errorHandler }))
+    .pipe(dest(`${build.email}/`))
+}
+
 export function watchFiles() {
   watch(`${source.pug}/**/*.pug`, series('html'))
   watch(`${source.css}/**/*.scss`, series('stylesDev'))
   watch(`${source.js}/**/*.js`, series('jsDev'))
-  watch(`${source.img}/**/*.{png,jpg,jpeg,webp,svg}`, series('imgDev'))
+  watch(`${source.img}/**/*.{png,jpg,jpeg,webp,svg}`, series('imgCopy'))
+  watch(`${source.email}/**/*.*`, series('emailCopy'))
 }
 
 const taskDev = series(
   clean,
-  parallel(html, stylesDev, jsLibs, jsDev, imgDev, fonts, serverInit, watchFiles)
+  parallel(html, stylesDev, jsLibs, jsDev, imgCopy, fonts, emailCopy, serverInit, watchFiles)
 )
 
 const taskBuild = series(
   clean,
-  parallel(html, stylesBuild, jsLibs, jsBuild, imgBuild, fonts)
+  parallel(html, stylesBuild, jsLibs, jsBuild, imgCopy, fonts)
 )
 
 export { taskDev as default, taskBuild as build }
